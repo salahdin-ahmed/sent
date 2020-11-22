@@ -18,6 +18,7 @@
 #include <X11/Xlib.h>
 #include <X11/Xutil.h>
 #include <X11/Xft/Xft.h>
+#include <X11/cursorfont.h>
 
 #include "arg.h"
 #include "util.h"
@@ -97,6 +98,7 @@ static void cleanup(int slidesonly);
 static void reload(const Arg *arg);
 static void load(FILE *fp);
 static void advance(const Arg *arg);
+static void toggle_cursor(const Arg *arg);
 static void quit(const Arg *arg);
 static void resize(int width, int height);
 static void run();
@@ -477,6 +479,30 @@ advance(const Arg *arg)
 		idx = new_idx;
 		xdraw();
 	}
+}
+
+void toggle_cursor(const Arg *arg)
+{
+	Cursor cursor;
+	XColor color;
+	Pixmap bitmapNoData;
+	char noData[] = { 0, 0, 0, 0, 0, 0, 0, 0 };
+	static int cursor_visible = 1;
+
+	memset(&color, 0, sizeof(color));
+
+
+	if (cursor_visible) {
+		bitmapNoData = XCreateBitmapFromData(xw.dpy, xw.win, noData, 8, 8);
+		cursor = XCreatePixmapCursor(xw.dpy, bitmapNoData,
+					     bitmapNoData, &color, &color, 0, 0);
+		XFreePixmap(xw.dpy, bitmapNoData);
+	} else {
+		cursor = XCreateFontCursor(xw.dpy, XC_left_ptr);
+	}
+	XDefineCursor(xw.dpy, xw.win, cursor);
+	XFreeCursor(xw.dpy, cursor);
+	cursor_visible ^= 1;
 }
 
 void
