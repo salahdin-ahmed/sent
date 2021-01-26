@@ -72,3 +72,11 @@ with `#` will be ignored. A `\` at the beginning of the line escapes `@` and
 - Inverted colors array for inverting main colors on the fly with a comman line options
 - Toggle mouse cursor on the fly inside the sent window with a hotkey
 - Progress bar for slides
+
+# Install
+
+	git clone https://github.com/salahdin-ahmed/sent
+	cd sent
+	sudo make clean install
+
+and thats it, now you have sent installed.
