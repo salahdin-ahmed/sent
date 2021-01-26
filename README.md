@@ -1,4 +1,4 @@
-#sent
+# sent
 Simple plaintext presentation tool.
 
 ![slide example from sent](sent-bullets-s.png)
@@ -12,12 +12,12 @@ is automatically scaled to fit the window and centered so you also don't have to
 worry about alignment. Instead you can really concentrate on the content.
 
 
-#Dependencies
+# Dependencies
 
 You need Xlib and Xft to build sent and the [farbfeld](http://tools.suckless.org/farbfeld/) tools installed to use
 images in your presentations.
 
-#Demo
+# Demo
 
 To get a little demo, just type
 
@@ -25,7 +25,7 @@ To get a little demo, just type
 
 You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and quit with `q`.
 
-#(Non-)Features
+# (Non-)Features
 
 - A presentation is just a simple text file.
 - Each paragraph represents one slide.
@@ -40,7 +40,7 @@ You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and 
 - No export function. If you really need one, just use a shell script with xdotool and your favorite screenshot application.
 - Slides with exuberant amount of lines or characters produce rendering glitches intentionally to prevent you from holding bad presentations.
 
-#Usage
+# Usage
 
 	sent [-f *font*] [-c *fgcolor*] [-b *bgcolor*] [-v] [-i] [*file*]
 
@@ -67,7 +67,7 @@ with `#` will be ignored. A `\` at the beginning of the line escapes `@` and
 	
 	thanks / questions?
 
-#Features of this fork
+# Features of this fork
 - Change colors on the fly from command line options
 - Inverted colors array for inverting main colors on the fly with a comman line options
 - Toggle mouse cursor on the fly inside the sent window with a hotkey
