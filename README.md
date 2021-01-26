@@ -42,9 +42,9 @@ You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and 
 
 # Usage
 
-	sent [-f *font*] [-c *fgcolor*] [-b *bgcolor*] [-v] [-i] [*file*]
+	sent [-f FONT] [-c FG-COLOR] [-b BG-COLOR] [-v] [-i] [FILE]
 
-If FILE is omitted or equals `-`, stdin will be read. Produce image slides by
+If *FILE* is omitted or equals `-`, stdin will be read. Produce image slides by
 prepending a `@` in front of the filename as a single paragraph. Lines starting
 with `#` will be ignored. A `\` at the beginning of the line escapes `@` and
 `#`. A presentation file could look like this:
