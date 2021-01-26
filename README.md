@@ -71,3 +71,4 @@ with `#` will be ignored. A `\` at the beginning of the line escapes `@` and
 - Change colors on the fly from command line options
 - Inverted colors array for inverting main colors on the fly with a comman line options
 - Toggle mouse cursor on the fly inside the sent window with a hotkey
+- Progress bar for slides
