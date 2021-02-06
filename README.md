@@ -16,14 +16,8 @@ worry about alignment. Instead you can really concentrate on the content.
 
 You need Xlib and Xft to build sent and the [farbfeld](http://tools.suckless.org/farbfeld/) tools installed to use
 images in your presentations.
-
-# Demo
-
-To get a little demo, just type
-
-	make && ./sent example
-
-You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and quit with `q`.
+## Void Linux
+	# xbps-install farbfeld libXft-devel fontconfig-devel libX11-devel
 
 # (Non-)Features
 
@@ -40,9 +34,16 @@ You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and 
 - No export function. If you really need one, just use a shell script with xdotool and your favorite screenshot application.
 - Slides with exuberant amount of lines or characters produce rendering glitches intentionally to prevent you from holding bad presentations.
 
+# Features of this fork
+
+- Change colors on the fly from command line options
+- Inverted colors array for inverting main colors on the fly with a comman line options
+- Toggle mouse cursor on the fly inside the sent window with a hotkey
+- Progress bar for slides
+
 # Usage
 
-	sent [-f FONT] [-c FG-COLOR] [-b BG-COLOR] [-v] [-i] [FILE]
+	$ sent [-f FONT] [-c FG-COLOR] [-b BG-COLOR] [-v] [-i] [FILE]
 
 If *FILE* is omitted or equals `-`, stdin will be read. Produce image slides by
 prepending a `@` in front of the filename as a single paragraph. Lines starting
@@ -67,16 +68,20 @@ with `#` will be ignored. A `\` at the beginning of the line escapes `@` and
 	
 	thanks / questions?
 
-# Features of this fork
-- Change colors on the fly from command line options
-- Inverted colors array for inverting main colors on the fly with a comman line options
-- Toggle mouse cursor on the fly inside the sent window with a hotkey
-- Progress bar for slides
+# Demo
+
+To get a little demo, just type
+
+	$ git clone https://github.com/salahdin-ahmed/sent
+	$ cd sent
+	$ make && ./sent example
+
+You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and quit with `q`.
 
 # Install
 
-	git clone https://github.com/salahdin-ahmed/sent
-	cd sent
-	sudo make clean install
+	$ git clone https://github.com/salahdin-ahmed/sent # do not do this if you already have cloned the repo (do not repeat this step if you have already done it while trying the demo)
+	$ cd sent # as mentioned above, don't repeat this
+	# make clean install
 
 and thats it, now you have sent installed.
