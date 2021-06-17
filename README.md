@@ -79,9 +79,8 @@ To get a little demo, just type
 You can navigate with the arrow keys, reload with `r`, hide cursor with `x` and quit with `q`.
 
 # Install
-
-	$ git clone https://github.com/salahdin-ahmed/sent # do not do this if you already have cloned the repo (do not repeat this step if you have already done it while trying the demo)
-	$ cd sent # as mentioned above, don't repeat this
+	$ git clone https://github.com/salahdin-ahmed/sent
+	$ cd sent
 	# make clean install
 
 and thats it, now you have sent installed.
